@@ -3,22 +3,38 @@
   background-color: rgb(202, 194, 194);
 }
 
-.cpu-choice {
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#cpu-choice {
   border: 2px solid black;
-  height: 30px;
+  height: 2rem;
+  width: 50vw;
   margin: 10px;
+  text-align: center;
 }
 
-.attempts-left {
+#attempts-left {
   border: 2px solid black;
-  height: 30px;
+  height: 1.2rem;
+  width: 2rem;
   margin: 10px;
+  text-align: center;
 }
 
-.alphabet {
+.letters {
   margin: 20px;
+  cursor: pointer;
 }
 
-.alphabet > * {
-  margin: 10px;
+.letter {
+  cursor: pointer;
+}
+
+#start-button {
+  margin-top: 2rem;
+  cursor: pointer;
 }

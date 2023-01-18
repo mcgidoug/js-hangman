@@ -3,15 +3,13 @@ import { words } from "./words.js";
 // query selectors
 let alphabet = document.querySelectorAll(".letters");
 let startButton = document.querySelector("#start-button");
-let cpuChoice = document.querySelector(".cpu-choice");
-let attemptsLeft = document.querySelector(".attempts-left");
-// variables / counters
-let wrongGuesses = 0;
-let attempts = 5;
+let cpuChoice = document.querySelector("#cpu-choice");
+let attemptsLeft = document.querySelector("#attempts-left");
 
 // functions
 // ============================================================================
 function randomWordChooser() {
+  let attempts = 5;
   let randomWordIndex = Math.floor(Math.random() * words.length);
   let cpuRandomWord = words[randomWordIndex];
 
@@ -34,9 +32,11 @@ function randomWordChooser() {
         cpuChoice.innerHTML = arrayToBeFilled.join(" ");
       } else {
         // code to handle wrong guesses
-        wrongGuesses++;
         attempts--;
         attemptsLeft.innerHTML = attempts;
+        if (attempts === 0) {
+          cpuChoice.innerHTML = "You Lose!";
+        }
       }
     });
   });
