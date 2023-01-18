@@ -1,5 +1,6 @@
 * {
   font-size: 30px;
+  background-color: rgb(202, 194, 194);
 }
 
 .cpu-choice {
@@ -8,7 +9,7 @@
   margin: 10px;
 }
 
-.player-choice {
+.attempts-left {
   border: 2px solid black;
   height: 30px;
   margin: 10px;
